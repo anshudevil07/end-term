@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <style>
+        .hideIt{
+            visibility: hidden;
+            /* visibility: ; */
+            position: absolute;
+            top: 0;
+            left: 10;
+        }
+        #alia{
+            top: 0;
+            
+        }
+    </style>
 </head>
+
 <body>
-    <div style="width:300px;">
-        <div><img src="img1.jpg" alt="" /></div>
-        <div style="padding-top:20px;">
-            <div id="coord"></div>
-        </div>
-    </div>
+    <div><img id="alia" src="a.jpeg" alt="" style="height: 500px;"></div>
+    <div class="hideIt" id="alia2"><img  src="b.jpg" height="500px" alt=""></div>
+    <p id="myX">none1</p>
+    <p id="myY">none2</p>
     <script>
-        $(document).ready(function() {
-            $('img').click(function(e) {
-                var offset = $(this).offset();
-                var X = (e.pageX - offset.left);
-                var Y = (e.pageY - offset.top);
-                $('#coord').text('X: ' + X + ', Y: ' + Y);
-            });
+        var myImage = document.getElementById('alia');
+        var alia2 = document.getElementById('alia2');
+        var xP = document.getElementById("myX");
+        var yP = document.getElementById("myY");
+        myImage.addEventListener('click' , function clickImage(event){
+            xP.innerText = event.offsetX;
+            yP.innerText = event.offsetY;
         });
+        
+        
 
-        $(document).ready(function() {
-        $('img').on("mousemove", function(e) {
-            var offset = $(this).offset();
-            var X = (e.pageX - offset.left);
-            var Y = (e.pageY - offset.top);
-            $('#coord').text('X: ' + X + ', Y: ' + Y);
-        });
-    });
     </script>
-
 </body>
+
 </html>
