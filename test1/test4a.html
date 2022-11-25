@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <p id="i"></p>
+</head>
+<body>
+    <script>
+        var arr1=["Empowered","Value-added","oriented","focused","alligned"];
+        var arr2=["Process","Solution","Tipping-point","Strategy","vision"];
+        var arr3=Math.floor(Math.random()*arr1.length);
+        var arr4=Math.floor(Math.random()*arr2.length);
+        document.getElementById("i").innerHTML=arr1[arr3]+"-"+arr2[arr4];
+        alert(arr1[arr3]+"-"+arr2[arr4]);
+    </script>
+</body>
+</html>

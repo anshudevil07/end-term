@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1 style="font-size:xxx-large ;">Click for details</h1>
+    <a onclick="myfunc()" > <u>Department</u></a>
+    <a onclick="myfun()"> <u>Department</u> Employee</a>
+    <ul id="q" style="display: none;">
+        <h3>Employee Details!</h3>
+        <li>emp1</li>
+        <li>emp1</li>
+        <li>emp1</li>
+        <li>emp1</li>
+    </ul>
+    <ul id="p" style="display: none;">
+        <h3>Department Details!</h3>
+        <li>dep1</li>
+        <li>dep1</li>
+        <li>dep1</li>
+        <li>dep1</li>
+    </ul>
+    <script>
+        function myfunc() {
+            document.getElementById("p").style.display = "inline";
+            document.getElementById("q").style.display = "none";
+        }
+        function myfun() {
+            document.getElementById("q").style.display = "inline";
+            document.getElementById("p").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
